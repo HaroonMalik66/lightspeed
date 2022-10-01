@@ -1,0 +1,24 @@
+.Footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.container {
+  min-width: 60%;
+  max-width: 80%;
+}
+.footbar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footbar li {
+  cursor: pointer;
+}
+.footerText {
+  text-align: center;
+}

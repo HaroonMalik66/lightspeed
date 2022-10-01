@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Packages from "./Packages";
+import About from "./About";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import "./App.css";
+
+function scrollToSection(id) {
+  if (id === "Pricing") id = "Packages";
+  if (id === "Home") id = "Header";
+  let section = document.getElementById(id);
+  section.scrollIntoView({ behavior: "smooth" });
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header scrollToSection={scrollToSection} />
+      <Packages />
+      <About />
+      <Contact />
+      <Footer scrollToSection={scrollToSection} />
     </div>
   );
 }
